@@ -42,8 +42,8 @@ decido:
 - Crear un dispositivo USB que pueda correr sobre Raspberry pi y que permita alterar ciertos parámetros de manera sutil y genere fallos y paros de operación.
 
 ## Delivery
-- T1586 - Compromise Accounts
-https://attack.mitre.org/techniques/T1586/
+- T1589.001 - Gather Victim Identity Information
+https://attack.mitre.org/techniques/T1589/001/
 
 puedo:
 - Suplantar a un paciente haciendo pasar por perdido o confundido e ingresar al lugar donde esta ubicado el sistema.
@@ -58,9 +58,12 @@ decido:
 - T1204 - User Execution: Malicious File
 https://attack.mitre.org/techniques/T1204/002/
 
-- Al insetar hardware en raspberry se activa script malicioso.
-- Malware enviado mediante pishing se activa al dar click.
-  
+puedo:
+- Al insertar una USB, se activa automáticamente un script malicioso que establece un canal de acceso remoto vía Wi-Fi y permite la manipulación de datos.
+
+decido:
+- Al insertar la USB en la Raspberry Pi, se ejecuta automáticamente un script malicioso diseñado para alterar progresivamente los datos recibidos de los sensores, generando fallos sutiles en el funcionamiento del sistema. 
+
 ## Installation
   - El archivo corre en segundo plano y persiste tras reinicios analizando la data de entrada.
   - 
