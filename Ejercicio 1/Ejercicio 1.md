@@ -92,6 +92,7 @@ Decido:
 - El script que se activa automáticamente al insertar la USB obtiene las credenciales de la red WiFi guardadas en el sistema, Con esta información se establece una conexión SSH desde un servidor externo hacia la Raspberry Pi, permitiendo al atacante tener control remoto persistente del sistema.
   
 ## Actions on Objectives
-  - acceder a la base de datos, borrar, editar y eliminar datos.
-  - provocar parada del sistema.
-  - generar datos falsos de manera sutil que genere gastos e inversión en el sistema
+  - Acceder a la base de datos, borrar, editar y eliminar datos.
+  - Provocar paradas del sistema en horas de mayor demanda.
+  - Alterar los datos de sensores de presión, generando acciones sobre bombas que puedan generar daños sobre equipos y sobre equipos que consumen el agua del sistema.
+  - generar datos falsos de manera sutil que genere gastos e inversión en el sistema.
