@@ -7,7 +7,7 @@ Armar una cyberkillchain usando técnicas de la matriz de Att&ck para un escenar
 
 Alumno: Jesús Enrique García Garnica
 
-El sistema víctima es una planta de tratamiento de agua compuesta de sensores de presión, bombas hidráulicas, sistemas de monitoreo,etc. Ubicada en un centro de salud que tiene como finalidad generar agua que cumpla con cierta normativa y que será utilizada por distintos equipos médicos.
+El sistema víctima es una planta de tratamiento de agua compuesta de sensores de presión, bombas hidráulicas, sistemas de monitoreo basado en Raspberry pi, etc. Ubicada en un centro de salud que tiene como finalidad generar agua que cumpla con cierta normativa y que será utilizada por distintos equipos médicos.
 
 Objetivo del ataque: Sabotear el funcionamiento de la planta de tratamiento con la finalidad de que pueda perder contrato y la competencia sea beneficiada.
 
@@ -35,8 +35,11 @@ https://attack.mitre.org/techniques/T1200
 - T1078 - Valid Accounts: Local Accounts
 https://attack.mitre.org/techniques/T1078/003/
 
-  -Añadir un dispositivo USB sobre raspberry pi que actua como concentrador de datos los sensores para alterar los datos.
-  -Enviar mensajes de correo electronico con malware al personal con acceso al sistema para tratar de adquirir las credenciales y acceder al servidor de la web del sistema.
+puedo:
+- Enviar mensajes de correo electronico con malware al personal con acceso al sistema para tratar de adquirir las credenciales y acceder al servidor de la web del sistema.
+
+decido:
+- Crear un dispositivo USB que pueda correr sobre Raspberry pi y que permita alterar ciertos parámetros de manera sutil y genere fallos y paros de operación.
 
 ## Delivery
 - T1586 - Compromise Accounts
@@ -50,8 +53,8 @@ https://attack.mitre.org/techniques/T1586/
 - T1204 - User Execution: Malicious File
 https://attack.mitre.org/techniques/T1204/002/
 
-  - Al insetar hardware en raspberry se activa script malicioso.
-  - Malware enviado mediante pishing se activa al dar click.
+- Al insetar hardware en raspberry se activa script malicioso.
+- Malware enviado mediante pishing se activa al dar click.
   
 ## Installation
   - El archivo corre en segundo plano y persiste tras reinicios analizando la data de entrada.
