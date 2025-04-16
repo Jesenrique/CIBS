@@ -5,11 +5,13 @@
 
 Armar una cyberkillchain usando técnicas de la matriz de Att&ck para un escenario relacionado al trabajo práctico de la carrera.
 
-* Jesús Enrique García Garnica
+Alumno: Jesús Enrique García Garnica
+
+El sistema víctima es una planta de tratamiento de agua compuesta de sensores de presión, bombas hidráulicas, sistemas de monitoreo,etc. Ubicada en un centro de salud que tiene como finalidad generar agua que cumpla con cierta normativa y que será utilizada por distintos equipos médicos.
 
 
 ### 
-* Objetivo del ataque: Sabotear el funcionamiento de la institución donde se encuentra instalado el sistema con la finalidad de que pueda perder contrato y la competencia sea beneficiada.
+* Objetivo del ataque: Sabotear el funcionamiento de la planta de tratamiento con la finalidad de que pueda perder contrato y la competencia sea beneficiada.
 
 ## Reconnaissance
 Técnicas usadas:
