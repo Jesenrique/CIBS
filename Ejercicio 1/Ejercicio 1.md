@@ -35,10 +35,10 @@ https://attack.mitre.org/techniques/T1200
 - T1078 - Valid Accounts: Local Accounts
 https://attack.mitre.org/techniques/T1078/003/
 
-puedo:
+Puedo:
 - Enviar mensajes de correo electronico con malware al personal con acceso al sistema para tratar de adquirir las credenciales y acceder al servidor de la web del sistema.
 
-decido:
+Decido:
 - Crear un dispositivo USB que pueda correr sobre Raspberry pi y que permita alterar ciertos parámetros de manera sutil y genere fallos y paros de operación.
 
 ## Delivery
@@ -46,13 +46,13 @@ Técnica usada:
 - T1589.001 - Gather Victim Identity Information
 https://attack.mitre.org/techniques/T1589/001/
 
-puedo:
+Puedo:
 - Suplantar a un paciente haciendo pasar por perdido o confundido e ingresar al lugar donde esta ubicado el sistema.
 
-puedo:
+Puedo:
 - Suplantar personal de salud (enfermero) e imgresar al lugar donde esta instalado el sistema.
 
-decido:
+Decido:
 - Suplantar a personal de mantenimiento con herramientas puede ser más fácil pasar desapercibido.
 
 ## Exploit 
@@ -60,10 +60,10 @@ Técnica usada:
 - T1204 - User Execution: Malicious File
 https://attack.mitre.org/techniques/T1204/002/
 
-puedo:
+Puedo:
 - Al insertar una USB, se activa automáticamente un script malicioso que establece un canal de acceso remoto vía Wi-Fi y permite la manipulación de datos.
 
-decido:
+Decido:
 - Al insertar la USB en la Raspberry Pi, se ejecuta automáticamente un script malicioso diseñado para alterar progresivamente los datos recibidos de los sensores, generando fallos sutiles en el funcionamiento del sistema. 
 
 ## Installation
@@ -81,8 +81,15 @@ Decido:
 - Una vez insertada la USB, el script malicioso se copia a la Raspberry Pi y se configura como un servicio del sistema que se inicia automáticamente con el encendido. Esto garantiza que el comportamiento malicioso persista incluso tras reinicios.
 
 ## Command & Control
- - via ssh desde las raspberry se crea un canal que permita conexiones remotas.
- - Acceder a las credenciales del wifi y obtener acceso desde un lugar cercano. 
+Técnica usada:
+- T1021.004 - Remote Services: SSH
+https://attack.mitre.org/techniques/T1021/004/
+
+Puedo:
+- Intentar acceder al sistema vía Bluetooth si me encuentro cerca, estableciendo una conexión directa para manipulación de datos.
+
+Decido:
+- El script que se activa automáticamente al insertar la USB obtiene las credenciales de la red WiFi guardadas en el sistema, Con esta información se establece una conexión SSH desde un servidor externo hacia la Raspberry Pi, permitiendo al atacante tener control remoto persistente del sistema.
   
 ## Actions on Objectives
   - acceder a la base de datos, borrar, editar y eliminar datos.
