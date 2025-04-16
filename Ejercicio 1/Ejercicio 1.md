@@ -42,6 +42,7 @@ decido:
 - Crear un dispositivo USB que pueda correr sobre Raspberry pi y que permita alterar ciertos parámetros de manera sutil y genere fallos y paros de operación.
 
 ## Delivery
+Técnica usada:
 - T1589.001 - Gather Victim Identity Information
 https://attack.mitre.org/techniques/T1589/001/
 
@@ -55,6 +56,7 @@ decido:
 - Suplantar a personal de mantenimiento con herramientas puede ser más fácil pasar desapercibido.
 
 ## Exploit 
+Técnica usada:
 - T1204 - User Execution: Malicious File
 https://attack.mitre.org/techniques/T1204/002/
 
@@ -65,8 +67,18 @@ decido:
 - Al insertar la USB en la Raspberry Pi, se ejecuta automáticamente un script malicioso diseñado para alterar progresivamente los datos recibidos de los sensores, generando fallos sutiles en el funcionamiento del sistema. 
 
 ## Installation
-  - El archivo corre en segundo plano y persiste tras reinicios analizando la data de entrada.
-  - 
+Técnicas usadas:
+- T1546.001 - Event Triggered Execution: Change Default File Association
+https://attack.mitre.org/techniques/T1546/001/
+
+- T1037.005 - Boot or Logon Initialization Scripts
+https://attack.mitre.org/techniques/T1037/005/
+
+Puedo:
+- Configurar el script para que se copie automáticamente al sistema de archivos de la Raspberry Pi y se ejecute al iniciar el dispositivo.
+
+Decido:
+- Una vez insertada la USB, el script malicioso se copia a la Raspberry Pi y se configura como un servicio del sistema que se inicia automáticamente con el encendido. Esto garantiza que el comportamiento malicioso persista incluso tras reinicios.
 
 ## Command & Control
  - via ssh desde las raspberry se crea un canal que permita conexiones remotas.
