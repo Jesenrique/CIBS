@@ -16,10 +16,10 @@ Técnicas usadas:
 - T1591 - Gather Victim Org Information
 https://attack.mitre.org/techniques/T1591
 
--T1592 - Gather Victim Host Information - hardwarek
+- T1592 - Gather Victim Host Information - hardwarek
 https://attack.mitre.org/techniques/T1592/001
 
--T1594 - Search Victim-Owned Websites
+- T1594 - Search Victim-Owned Websites
 https://attack.mitre.org/techniques/T1594
 
   - El sistema esta ubicado en un lugar de acceso publico donde transitan demasiadas personas sin importar la hora, permitiendo vigilar el lugar y determinar mejores horarios de alto y bajo movimiento de personas.
@@ -45,9 +45,14 @@ decido:
 - T1586 - Compromise Accounts
 https://attack.mitre.org/techniques/T1586/
 
-- Envió a persona que suplanta personal de mantenimiento, el cual logra ingresar al lugar e inyectar script en la raspberry pi.
-- Identificó personas que usan whatsapp web durante su labor y envio malware.
-- Identficó al personal con acceso al sistema e intento enviar malware mediante correo electronico.
+puedo:
+- Suplantar a un paciente haciendo pasar por perdido o confundido e ingresar al lugar donde esta ubicado el sistema.
+
+puedo:
+- Suplantar personal de salud (enfermero) e imgresar al lugar donde esta instalado el sistema.
+
+decido:
+- Suplantar a personal de mantenimiento con herramientas puede ser más fácil pasar desapercibido.
 
 ## Exploit 
 - T1204 - User Execution: Malicious File
